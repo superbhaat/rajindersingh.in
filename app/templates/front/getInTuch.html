@@ -14,24 +14,24 @@
           </div>
           <div class="getInTouch-inner">
             <div class="row">
-              <form action="/action_page.php">
+              <form action="{{ url_for('getInTuch') }}" method="POST" enctype="multipart/form-data">
                 <div class="mb-3 mt-3">
-                  <label class="form-label">Name <sup>*</sup></label>
-                  <input type="text" class="form-control" placeholder="Your Name" name="text">
+                  <label class="form-label" for="yourName">Name <sup>*</sup></label>
+                  <input type="text" class="form-control" placeholder="Your Name" id="yourName" name="yourName">
                 </div>
                 <div class="mb-3">
-                  <label class="form-label">Email Address <sup>*</sup></label>
-                  <input type="email" class="form-control" placeholder="Your Email Address" name="email">
+                  <label class="form-label" for="email">Email Address <sup>*</sup></label>
+                  <input type="email" class="form-control" placeholder="Your Email Address" id="email" name="email" autocomplete="off">
                 </div>
                 <div class="mb-3">
-                  <label class="form-label">Phone Number <sup>*</sup></label>
-                  <input type="number" class="form-control" placeholder="Your Phone Number" name="number">
+                  <label class="form-label" for="phoneNumber">Phone Number <sup>*</sup></label>
+                  <input type="number" class="form-control" placeholder="Your Phone Number" id="phoneNumber" name="phoneNumber">
                 </div>
                 <div class="mb-3">
-                  <label class="form-label">How we can help <sup>*</sup></label>
-                  <textarea class="form-control" placeholder="Your Message" rows="5"></textarea>
+                  <label class="form-label" for="message">How we can help <sup>*</sup></label>
+                  <textarea class="form-control" placeholder="Your Message" rows="5" id="message" name="message"></textarea>
                 </div>
-                <a href="javascript:void(0);" class="btn btn-primary">Submit</a>
+                <input type="submit" class="btn  btn-primary" name="Submit">
               </form>
             </div>
           </div>
