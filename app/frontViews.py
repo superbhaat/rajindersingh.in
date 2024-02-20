@@ -10,10 +10,11 @@ def index():
 @app.route("/getInTuch",  methods=["GET", "POST"])
 def getInTuch():
     if request.method == "POST":
-        yourName = request.form.get("yourName")
-        email = request.form.get("email")
-        phoneNumber = request.form.get("phoneNumber")
-        message = request.form.get("message")
+        req = request.form
+        yourName = req.get("yourName")
+        email = req.get("email")
+        phoneNumber = req.get("phoneNumber")
+        message = req.get("message")
         print(yourName)
     return render_template("front/index.html")
 
