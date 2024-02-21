@@ -15,3 +15,4 @@ app.config.from_object("config.Production")
 
 from app import frontViews
 from app import adminViews
+from app import errorHandlers
